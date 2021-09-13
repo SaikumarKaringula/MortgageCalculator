@@ -22,6 +22,7 @@ public class Main {
         int totalMonths = period* MONTHS_IN_YEAR;
         double monthlyInterest = (annualInterest/PERCENT)/MONTHS_IN_YEAR;
 
+        //Added comment
         double mortgage = (principal)
                             * ( monthlyInterest * Math.pow(1+monthlyInterest, totalMonths))
                             / ((Math.pow(1+monthlyInterest, totalMonths)-1));
