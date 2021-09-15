@@ -59,7 +59,7 @@ public class Main {
         double balance = principal;
         while(balance > 0 ){
             balance = principal
-                    * ((Math.pow(1+monthlyInterest, noOfPayments))
+                    * (Math.pow(1+monthlyInterest, noOfPayments)
                     - Math.pow(1 + monthlyInterest, noOfPaymentsMade))
                     /((Math.pow(1+monthlyInterest, noOfPayments))-1);
             System.out.println(" Balance : " +NumberFormat.getCurrencyInstance().format(balance));
