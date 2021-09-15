@@ -15,6 +15,13 @@ public class Main {
         String formattedMortage = NumberFormat.getCurrencyInstance().format(mortgage);
 
         System.out.println("Your monthly payment is " +formattedMortage);
+<<<<<<< Updated upstream
+=======
+        for(short month = 1; month <= period * MONTHS_IN_YEAR; month++) {
+            double balance = calculateRemainingAmount(principal, annualInterest, period, month);
+            System.out.println(" Balance : " +NumberFormat.getCurrencyInstance().format(balance));
+        }
+>>>>>>> Stashed changes
 
     }
     public static double readNumber(String prompt, int min, int max){
@@ -43,4 +50,20 @@ public class Main {
                 / ((Math.pow(1+monthlyInterest, noOfPayments)-1));
         return mortgage;
     }
+<<<<<<< Updated upstream
+=======
+    public static double calculateRemainingAmount(int principal, double annaualIntrestRate,int period, short noOfPaymentsMade ){
+
+
+        double monthlyInterest = ( annaualIntrestRate/PERCENT)/MONTHS_IN_YEAR;
+        int noOfPayments = period * MONTHS_IN_YEAR;
+
+        double balance = principal
+                    * (Math.pow(1+monthlyInterest, noOfPayments)
+                    - Math.pow(1 + monthlyInterest, noOfPaymentsMade))
+                    /((Math.pow(1+monthlyInterest, noOfPayments))-1);
+        return balance;
+
+    }
+>>>>>>> Stashed changes
 }
